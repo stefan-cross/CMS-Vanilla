@@ -1,0 +1,147 @@
+/* Telefonica blue #1A3E69*/
+/* *********************************************** */
+
+#hero {
+    top: 0px;
+    height: 50px;
+    width: 100%;
+    border: 0px;
+    margin: 0px;
+    background-color: #e7e7e7;
+}
+
+#hero img {
+    height: 45px;
+    padding: 5px;
+}
+
+#hero p, sup{
+    display: inline;
+    color: white;
+}
+
+#logo {
+    float: left;
+    padding: 5px;
+}
+
+#navbar-right {
+    float: right !important;
+    margin-right: 15px;
+    padding: 15px;
+}
+
+#navbar-right a {
+    margin: 0px 10px 0px 10px;
+}
+
+#left_sidebar {
+    position: fixed;
+    left: 0px;
+    height: 100%;
+    float: left;
+    background-color: #e7e7e7;
+}
+
+.navbar-default{
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+
+
+#right_sidebar {
+    position: fixed;
+    right: 0px;
+    width: 37%;
+    height: 100%;
+    float: right;
+    background-color: #e7e7e7;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+#content {
+    margin-left: 2%;
+    display: inline-block;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+
+}
+
+#captive {
+    width: 95%;
+    min-height: 300px;
+    margin: 0px auto;
+    float: none;
+    background-color: #9acfea;
+    padding: 5%;
+    text-align: center;
+}
+
+#captive #header, #footer {
+    width: 100%;
+    margin: 0px auto;
+    float: none;
+    background-color: #fff;
+    margin: 2% 0% 2% 0%;
+    display: inline-block;
+}
+
+#captive #header #logo {
+    width: 10%;
+    margin: 0px auto;
+    float: none;
+    background-color:#31b0d5;
+}
+
+#captive #sidenav {
+    width: 20%;
+    height: 80%;
+    float: left;
+    background-color: #fff;
+}
+
+#captive #top, #bottom {
+    margin: 0px auto;
+    float: none;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    margin: 1%;
+}
+
+#captive #carousel {
+    width: 78%;
+    min-height: 110px;
+    float: left;
+    margin: 0% 0% 0% 2%;
+    background-color: #fff;
+}
+
+#captive #shoutout {
+    float: left;
+    width: 20%;
+    min-height: 50px;
+    margin: 1% 1% 1% 0%;
+    background-color: #fff;
+    display: inline-block;
+}
+
+#captive #promos li {
+    float: left;
+    width: 18%;
+    min-height: 50px;
+    margin: 1%;
+    display: inline-block;
+    background-color: #fff;
+}
+
+.hoverable :hover, #captive #carousel:hover , #logo:hover {
+    border: 1.5px dashed;
+    border-color: crimson;
+}

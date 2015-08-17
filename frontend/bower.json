@@ -1,0 +1,32 @@
+{
+  "name": "CMS-PoC",
+  "version": "0.0.0",
+  "authors": [
+    "stefancross <stefan.cross@o2.com>"
+  ],
+  "description": "CMS front end",
+  "main": "index",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.*",
+    "angular-bootstrap": "~0.13.0",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "typeahead.js": "~0.10.5",
+    "font-awesome": "~4.3.0",
+    "remarkable-bootstrap-notify": "~3.1.3",
+    "animate.css": "~3.3.0",
+    "angular-messages": "~1.4.1",
+    "angular-resource": "~1.4.3",
+    "angular-ui-router": "~0.2.15",
+    "ng-file-upload-shim": "~6.0.4"
+  }
+}

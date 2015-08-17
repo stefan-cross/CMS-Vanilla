@@ -1,0 +1,90 @@
+<div ng-controller="RestCtrl" class="col-md-9">
+    <h1>Basic CRUD functionality</h1>
+    {{message}}
+    <hr/>
+    <div class="col-xs-12 col-sm-6 col-lg-8">
+        <h2>Create</h2>
+        <form class="navbar-form navbar-left" role="create">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Create forename" ng-model="forename">
+                <input type="text" class="form-control" placeholder="Create surname" ng-model="surname">
+            </div>
+            <button type="submit" class="btn btn-success" ng-click="create(forename,surname)">Create</button>
+        </form>
+        <br/>
+        <br/>
+        <br/>
+        <div>
+            <p>Creating
+                user Forename: {{forename}} Surname: {{surname}}</p>
+            <p>{{created}}</p>
+        </div>
+
+        <h2>Update</h2>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control " placeholder="ID" ng-model="user.id"  style="width:10%;">
+                <input type="text" class="form-control" placeholder="Forename" ng-model="user.forename">
+                <input type="text" class="form-control" placeholder="Surname" ng-model="user.surname">
+                <button type="submit" class="btn btn-primary" ng-click="update(user.id, user)">Update</button>
+            </div>
+        </form>
+        <br/>
+        <br/>
+        <br/>
+        <div>
+            <p>Updating user ID {{user.id}}</p>
+            <p>{{ updateresult }}</p>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-8">
+        <h2>Delete</h2>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Delete user by ID" ng-model="delete_id">
+            </div>
+            <button type="submit" class="btn btn-danger" ng-click="delete(delete_id)">Delete</button>
+        </form>
+        <br/>
+        <br/>
+        <br/>
+        <div>
+            <p>Deleting user ID {{delete_id}}</p>
+            <p>{{ deleteresult }}</p>
+        </div>
+
+        <h2>Read</h2>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search by Surname" ng-model="user_surname">
+            </div>
+            <button type="submit" class="btn btn-primary" ng-click="searchBySurname(user_surname)">Search</button>
+        </form>
+        <br/>
+        <div>
+            <p>Searching for user: {{user_surname}}</p>
+            <p>{{search_error}}</p>
+            <div ng-repeat="x in users">
+                <p>Firstname: {{x.firstName}}</p>
+                <p>Surname: {{x.lastName}}</p>
+            </div>
+        </div>
+    </div>
+    <!--<div class="col-sm-6 col-md-5 col-lg-6">-->
+    <!--<form class="navbar-form navbar-left" role="search">-->
+    <!--<div class="form-group">-->
+    <!--<input type="text" class="form-control" placeholder="Search by ID" ng-model="user_id">-->
+    <!--</div>-->
+    <!--<button type="submit" class="btn btn-default" ng-click="searchByID(user_id)">Find</button>-->
+    <!--</form>-->
+    <!--<br/>-->
+    <!--<br/>-->
+    <!--<hr/>-->
+    <!--<div>-->
+    <!--<p>Searching for user: {{user_id}}</p>-->
+    <!--<p>{{search_error}}</p>-->
+    <!--<p>Firstname: {{users.firstName}}</p>-->
+    <!--<p>Surname: {{users.lastName}}</p>-->
+    <!--</div>-->
+    <!--</div>-->
+</div>

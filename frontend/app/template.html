@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mydemo">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.3.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../includes/css/style.css">
+    <script src="../includes/js/script.js"></script>
+
+    <title>O2 Wifi CMS PoC</title>
+</head>
+<body>
+    <nav id="hero">
+        <img src="../www/images/logo.png">
+        <p>CMS </p><sup> alpha</sup>
+        <div id="navbar-right" ng-controller="DropdownCtrl">
+        <span dropdown on-toggle="toggled(open)">
+          <a href id="simple-dropdown2" dropdown-toggle>
+              <i class="glyphicon glyphicon-list"></i>
+              Manage content
+          </a>
+          <a href id="simple-dropdown" dropdown-toggle>
+              <i class="glyphicon glyphicon-user"></i>
+              Profile options
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="simple-dropdown">
+              <li ng-repeat="choice in items">
+                  <a href>{{choice}}</a>
+              </li>
+          </ul>
+        </span>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-default sidebar" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <div style="min-height: 36px">&nbsp;</div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Promotions <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                            <li><a ui-sref="editMainPromos({customerId: '10'})" href="#/editMainPromos/10">Main Promos</a></li>
+                            <li><a ui-sref="editSubPromos({customerId: '10'})" href="#/editSubPromos/10">Sub Promos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Uploads<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-picture"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="right_sidebar">
+        Menu
+        <ul>
+            <li>1</li>
+            <li>2</li>
+        </ul>
+    </div>
+
+    <div id="content">
+        content
+        <div id="captive">
+            captive
+            <div id="header">
+                header
+                <div id="logo" class="hoverable">logo</div>
+            </div>
+            <div id="top">
+                <div id="sidenav">sidenav
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </div>
+                <div id="carousel" class="hoverable">carousel</div>
+            </div>
+            <div id="bottom">
+                <div id="shoutout">shoutout</div>
+                <ul id="promos" class="hoverable">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </div>
+        <div id="footer">footer</div>
+        </div>
+    </div>
+</body>
+</html>
