@@ -1,5 +1,5 @@
 # CMS-Vanilla
-A sample CMS system using a Angular front end and a Spring RESTful backend
+A sample CMS system using a Angular front end and a Spring RESTful backend. Started as a learning exercise with the potential to be useful to others.
 
 To get things up and running you will need:
 
@@ -13,7 +13,7 @@ To get things up and running you will need:
 
 Build the API with:
 
-   mvn package
+    mvn package
 
 Run the API with:
 
@@ -23,6 +23,8 @@ Run the API with:
    
 Build the CMS front end with:
 
+    bower install
+    npm install
     gulp build
     gulp inject
     
