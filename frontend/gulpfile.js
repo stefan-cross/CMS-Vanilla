@@ -124,7 +124,7 @@ gulp.task('inject', function(){
 
 gulp.task('watch', function() {
     gulp.watch('./app/**/*.js', ['clean-dist', 'compact-core-js', 'compact-cms-js', 'compact-core-css', 'compact-cms-css']);
-    gulp.watch('./includes/css/**/*.css');
+    gulp.watch('./includes/css/**/*.css', ['clean-dist', 'compact-core-js', 'compact-cms-js', 'compact-core-css', 'compact-cms-css']);
 });
 
 gulp.task('build', ["compact-core-js", "compact-cms-js", 'compact-core-css', 'compact-cms-css', 'fonts'], function () {

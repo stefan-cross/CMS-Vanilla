@@ -70,6 +70,34 @@
             </div>
         </div>
     </div>
+
+    <div class="col-xs-12 col-sm-6 col-lg-8">
+        <h2>Find All</h2>
+        <form class="navbar-form navbar-left" role="findAll">
+            <button type="submit" class="btn btn-primary" ng-click="findAll()">Find all records</button>
+        </form>
+        <br/><br/><br/>
+        <div>
+            <p>{{findAllError}}</p>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Surname</th>
+                    <th>Link</th>
+                    <ht></ht>
+                </tr>
+                </thead>
+                <tbody ng-repeat="y in allusers">
+                <tr>
+                    <td>Firstname: {{y.firstName}}</td>
+                    <td>Surname: {{y.lastName}}</td>
+                    <td>Link: <a href="{{y._links.self.href}}">{{y._links.self.href}}</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <!--<div class="col-sm-6 col-md-5 col-lg-6">-->
     <!--<form class="navbar-form navbar-left" role="search">-->
     <!--<div class="form-group">-->

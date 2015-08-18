@@ -12,6 +12,17 @@ MyApp.controller("RestCtrl" ,function($scope, $http) {
     //        .error(onError)
     //};
 
+    $scope.findAll = function() {
+        $http.get("http://localhost:8080/people/")
+            .success(function(response){
+                $scope.allusers = response._embedded.people;
+                console.log(response._embedded.people);
+            })
+            .error(function(){
+                $scope.findAllError = "Records could not be located";
+            })
+    }
+
     $scope.searchBySurname = function(surname){
             $http.get("http://localhost:8080/people/search/findByLastName?name=" + surname)
                 .then(onUserComplete, onError);
